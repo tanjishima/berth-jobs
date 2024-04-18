@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        max-width: 900px;
+        margin: 0 auto;
+        height: 600px;
+        border:1px solid #808080;
+        padding: 20px;
+    }
+    /* .box:nth-child(odd) {
+       background-color: aqua;
+    }
+    .box:nth-child(even) {
+        background-color: blueviolet;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ; 
+        grid-template-rows: repeat(3 1fr);
+       gap: 20px;
+        
+    }
+    .item{
+        background-color: red!important;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .item2{
+        background-color:blue!important;
+        grid-row-start: 1;
+        grid-row-end: 5;
+
+       
+    } */
+    .header{
+        background-color: aqua;
+        grid-area: header;
+    }
+    .footer{
+        background-color:red ;
+        grid-area: footer;
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: blue;
+    }
+    .main{
+        grid-area: main;
+        background-color: cornflowerblue;
+    }
+
+    .grid-container{
+        display: grid;
+       grid-template-areas: 
+       "sidebar header header header"
+       "sidebar main main main"
+       "sidebar footer footer footer";
+       grid-template-rows: 100px auto 100px;
+       grid-template-columns: 200px auto;
+    }
+
+
+</style>
+<body>
+    <div class="container grid-container">
+        <div class="header">header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+    
+    </div>
+</body>
+</html>
